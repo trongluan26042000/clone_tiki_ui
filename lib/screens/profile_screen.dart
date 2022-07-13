@@ -1,6 +1,4 @@
-import 'package:clone_tiki_ui/model/banner.dart';
 import 'package:clone_tiki_ui/model/constant.dart';
-import 'package:clone_tiki_ui/screens/home/profile_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -176,40 +174,55 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Row(
                 children:  [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        const SizedBox(width: 20.0,),
+                        Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM0YvRwQCB4rgAavIa0xzu4A7q1whXSl1QyCeGJxcMWg&s',width: 40,height: 40,),
+                        const Text('Chờ thanh'),
+                        const Text('toán'),
+                      ],
+                    ),
+                  ),
                   const SizedBox(width: 20.0,),
-                  Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM0YvRwQCB4rgAavIa0xzu4A7q1whXSl1QyCeGJxcMWg&s',width: 40,height: 40,),
-                  const SizedBox(width: 45.0,),
-                  Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUzhutMfVShtw_UMrUBeCYXgAxnptbOY-ffA&usqp=CAU',width: 40,height: 40,),
-                  const SizedBox(width: 45.0,),
-                  Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGspxdLINwgQEst53CjfhPYM-otBirjpsI-Q&usqp=CAU',width: 40,height: 40,),
-                  const SizedBox(width: 45.0,),
-                  Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGspxdLINwgQEst53CjfhPYM-otBirjpsI-Q&usqp=CAU',width: 40,height: 40,),
-                  const SizedBox(width: 45.0,),
-                  Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGspxdLINwgQEst53CjfhPYM-otBirjpsI-Q&usqp=CAU',width: 40,height: 40,),
+                  Column(
+                    children: [
+                      const SizedBox(width: 45.0,),
+                      Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUzhutMfVShtw_UMrUBeCYXgAxnptbOY-ffA&usqp=CAU',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Đang xử lý'),
+                    ],
+                  ),
+                  const SizedBox(width: 30.0,),
+                  Column(
+                    children: [
+                      const SizedBox(width: 45.0,),
+                      Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGspxdLINwgQEst53CjfhPYM-otBirjpsI-Q&usqp=CAU',width: 40,height: 40,),
+                      const Text('Đang vận'),
+                      const Text('chuyển'),
+                    ],
+                  ),
+                  const SizedBox(width: 30.0,),
+                  Column(
+                    children: [
+                      const SizedBox(width: 45.0,),
+                      Image.network('https://cdn-icons.flaticon.com/png/128/3269/premium/3269585.png?token=exp=1657698529~hmac=cc85fc8de60cd92ee14f380b7cfb5284',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Đã giao'),
+                    ],
+                  ),
+                  const SizedBox(width: 30.0,),
+                  Column(
+                    children: [
+                      const SizedBox(width: 45.0,),
+                      Image.network('https://cdn-icons-png.flaticon.com/128/1642/1642408.png',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Đổi trả'),
+                    ],
+                  ),
                 ],
               ),
-              // Row(
-              //   children: const [
-              //     SizedBox(width: 10.0,),
-              //     Text('Chờ thanh'),
-              //     SizedBox(width: 20.0,),
-              //     Text('Đang xử lý'),
-              //     SizedBox(width: 20.0,),
-              //     Text('Đang vận'),
-              //     SizedBox(width: 30.0,),
-              //     Text('Đã giao'),
-              //     SizedBox(width: 40.0,),
-              //     Text('Đổi trả'),
-              //   ],
-              // ),
-              // Row(
-              //   children: const [
-              //     SizedBox(width: 20.0,),
-              //     Text('toán'),
-              //     SizedBox(width: 140.0,),
-              //     Text('chuyển'),
-              //   ],
-              // ),
             ],
           ),
         ),
@@ -218,11 +231,165 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Container(
           color: Colors.white,
-          child: const ListTile(
-            leading: Icon(Icons.star),
-            title: Text('Đánh giá sản phẩm',style: TextStyle(fontWeight: FontWeight.bold),),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              children: const [
+                SizedBox(height: 40.0,),
+                Icon(Icons.star),
+                SizedBox(width: 10.0,),
+                Text('Đánh giá sản phẩm',style: TextStyle(fontWeight: FontWeight.bold),),
+                SizedBox(width: 200.0,),
+                Icon(Icons.arrow_forward_ios),
+              ],
+            ),
           ),
         ),
+        const Divider(
+          thickness: 1,
+        ),
+        Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              children: const [
+                SizedBox(height: 40.0,),
+                Icon(Icons.person),
+                SizedBox(width: 10.0,),
+                Text('Trung tâm trợ giúp',style: TextStyle(fontWeight: FontWeight.bold),),
+                SizedBox(width: 200.0,),
+                Icon(Icons.arrow_forward_ios),
+              ],
+            ),
+          ),
+        ),
+
+        const Divider(
+          thickness: 1,
+        ),
+
+        Container(
+          color: Colors.white,
+          child:  Column(
+            children: [
+              Row(
+                children:  const [
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Text(
+                      'Quan tâm',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons.flaticon.com/png/128/4196/premium/4196716.png?token=exp=1657696628~hmac=1053d48ee111c6e9d4cd650371ceb29a',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Đã xem',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.green),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons-png.flaticon.com/128/263/263417.png',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Yêu thích',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.pink),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons-png.flaticon.com/128/743/743007.png',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Mua lại',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.yellow),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons-png.flaticon.com/128/3893/3893258.png',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Theo dõi',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red),),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+
+        const Divider(
+          thickness: 1,
+        ),
+
+
+        Container(
+          color: Colors.white,
+          child:  Column(
+            children: [
+              Row(
+                children:  const [
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Text(
+                      'Tiện ích khác',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons.flaticon.com/png/128/4543/premium/4543070.png?token=exp=1657696736~hmac=9609a97495d299867558bdc5ad6a68c4',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Thu thập',style: TextStyle(fontWeight: FontWeight.bold),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons.flaticon.com/png/128/1989/premium/1989125.png?token=exp=1657696775~hmac=95cdddac8157827b93e19d0ae38f2aca',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Phương thức',style: TextStyle(fontWeight: FontWeight.bold),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons-png.flaticon.com/128/44/44334.png',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Địa chỉ',style: TextStyle(fontWeight: FontWeight.bold),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 100.0)),
+                      Image.network('https://cdn-icons-png.flaticon.com/128/545/545674.png',width: 40,height: 40,),
+                      const SizedBox(height: 9.0,),
+                      const Text('Thông tin',style: TextStyle(fontWeight: FontWeight.bold),),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+
         const Divider(
           thickness: 1,
         ),
